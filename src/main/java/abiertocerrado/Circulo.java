@@ -1,6 +1,6 @@
 package abiertocerrado;
 
-public class Circulo {
+public class Circulo implements Forma {
 
     private double radio;
 
@@ -8,7 +8,8 @@ public class Circulo {
         this.radio = radio;
     }
 
-    public double calcularAreaCirculo() {
+    @Override
+    public double calcularArea() {
         return Math.PI * Math.pow(radio, 2);
     }
 }

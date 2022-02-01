@@ -6,16 +6,23 @@ public class Principal {
         double largo = 50;
         double radio = 3;
         double precioMaterial = 2;
+        double base = 5;
+        double altura = 8;
 
-        Rectangulo rectangulo = new Rectangulo(ancho, largo);
-        Circulo circulo = new Circulo(radio);
+        Forma rectangulo = new Rectangulo(ancho, largo);
+        Forma circulo = new Circulo(radio);
+        Forma triangulo = new Triangulo(base, altura);
 
-        Espejo espejoRectangular = Espejo.crearEspejoRectangular(rectangulo, precioMaterial);
-        Espejo espejoRedondo = Espejo.crearEspejoRedondo(circulo, precioMaterial);
+        Espejo espejoRectangular = new Espejo(rectangulo, precioMaterial);
+        Espejo espejoRedondo = new Espejo(circulo, precioMaterial);
 
         System.out.println(espejoRectangular.calcularPrecio());
 
         System.out.println(espejoRedondo.calcularPrecio());
+
+        Espejo espejoTriangular = new Espejo(triangulo, precioMaterial);
+
+        System.out.println(espejoTriangular.calcularPrecio());
 
     }
 }

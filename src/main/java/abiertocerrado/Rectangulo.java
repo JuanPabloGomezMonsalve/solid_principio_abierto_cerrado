@@ -1,6 +1,6 @@
 package abiertocerrado;
 
-public class Rectangulo {
+public class Rectangulo implements Forma {
 
     private double ancho;
     private double alto;
@@ -10,8 +10,8 @@ public class Rectangulo {
         this.alto = alto;
     }
 
-    public double calcularAreaRectangulo() {
-
+    @Override
+    public double calcularArea() {
         return alto * ancho;
     }
 }
